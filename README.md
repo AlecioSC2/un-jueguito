@@ -1,15 +1,10 @@
-# Phaser 3 + ES6 + Webpack Boilerplate
-A boilerplate project for creating games with Phaser3, ES6 and Webpack.
+# Un Jueguito
+A Simple game made in Phaser 3
 
 ## Setup
 
 ### Environment
 Requires node.js and npm to be installed: https://nodejs.org/en/
-
-### Download repo
-From your workspace directory run:
-
-`git clone https://github.com/jedhastwell/phaser3-es6-webpack-boilerplate.git`
 
 ### Install Dependencies
 From the project directory run:
