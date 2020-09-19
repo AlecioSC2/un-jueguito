@@ -4,7 +4,7 @@ import StateMachine from 'javascript-state-machine';
 class Hero extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y) {
     super(scene, x, y, 'hero-run-sheet', 0);
-
+    this.scene = scene;
     scene.add.existing(this);
     scene.physics.add.existing(this);
     this.anims.play('hero-run');
@@ -105,6 +105,7 @@ class Hero extends Phaser.GameObjects.Sprite {
       ],
       methods: {
         onJump: () => {
+          this.scene.sound.play('jump');
           this.body.setVelocityY(-400);
         },
         onFlip: () => {

@@ -60,12 +60,20 @@ class Game extends Phaser.Scene {
       spacing: 2,
     });
     this.load.image('clouds-sheet', 'assets/tilesets/clouds.png');
+
+    this.load.audio('background', 'assets/audio/background.mp3');
+    this.load.audio('jump', 'assets/audio/jump.wav');
   }
 
   create(data) {
     this.cursorKeys = this.input.keyboard.createCursorKeys();
     this.addMap();
     this.addHero();
+
+    const backgroundMusic = this.sound.add('background', { loop: true });
+    const jump = this.sound.add('jump');
+
+    backgroundMusic.play();
     //this.input.keyboard.on('keydown-SPACE', () => {
     //  console.log('space');
     //})
